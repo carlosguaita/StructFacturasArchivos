@@ -13,9 +13,15 @@ typedef struct{
 }Producto;
 
 typedef struct{
+    char nombre[50];
+    float precio;
+    int cantidad;
+}Item;
+
+typedef struct{
     Cliente cliente;
     int numProd;
-    Producto productos[5];
+    Item item[5];
 }Factura;
 
 void leerCadena(char *cadena, int n);
@@ -32,3 +38,7 @@ int obtenerProductos(Producto *productos);
 void listarProductos(Producto *productos);
 void crearFactura();
 void guardarFactura(Factura *factura);
+int obtenerFacturas(Factura *facturas);
+void listarFacturas(Factura *facturas);
+void editarProducto(int id, int cantidadRestar);
+

@@ -29,6 +29,10 @@ int main (int argc, char *argv[]) {
         case 6:
             crearFactura();
             break;
+        case 7:
+            Factura facturas[5];
+            listarFacturas(facturas);
+            break;
         default:
             break;
         }
